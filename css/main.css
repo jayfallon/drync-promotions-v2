@@ -1,0 +1,579 @@
+@keyframes grow {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fading {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+	1% {
+		display: inherit;
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.fading {
+	animation: fading .5s ease-in-out;
+}
+
+body {
+	background-color: #f4f7f8;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+}
+
+h1, h2, h3, h4 {
+	font-family: Gnuolane, sans-serif;
+}
+
+input[type='text'], textarea {
+	align-self: stretch;
+	border: 1px solid #C8C9CA;
+}
+
+a {
+	color: #37BAE6;
+}
+
+button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 15px;
+  line-height: 1.428571429;
+  border-radius: 1px;
+  background-color: red;
+}
+
+.drync-grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: [nav] 102px [content] 1fr;
+	grid-template-rows: 51px auto;
+	grid-template-areas:
+		"header header"
+		"nav main";
+}
+
+header {
+	grid-area: header;
+}
+
+.header-bg {
+	background-color: #fff;
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #e7e7e7;
+	display: grid;
+	grid-template-columns: [logo] 1fr [store-select] 195px [avatar] 55px;
+	grid-template-rows: 51px;
+	grid-template-areas:
+		"logo store-select avatar";
+}
+
+.header-bg h1 {
+	margin: 0 0 0 30px;
+	padding: 0;
+	width: 148px;
+	height: 35px;
+	position: relative;
+	grid-area: logo;
+	align-self:center;
+	display:flex;
+	align-items:stretch;
+}
+
+.header-bg h1 a {
+	background-image: url('../img/powered_by_logo.svg');
+	background-size: 148px 35px;
+	width: 148px;
+	height: 35px;
+}
+
+.header-bg h1 a span {
+	display: none;
+}
+
+.wrapper {
+	height: 100vh;
+	display: flex;
+	align-items: stretch;
+}
+
+.store-selection {
+	grid-area: store-select;
+	align-self:center;
+}
+
+.store-selection select {
+	width:180px;
+	font-size:15px;
+}
+
+.user-avatar {
+	grid-area: avatar;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.user-avatar a {
+	background-image: url("../img/user-avatar_27292B.svg");
+	background-size: 35px 35px;
+	width:35px;
+	height:35px;
+}
+
+nav {
+	background-color: #1F2022;
+	grid-area: nav;
+}
+
+.nav-wrapper {
+	padding-top:30px;
+	display: grid;
+	grid-template-columns: 102px;
+	grid-template-rows: 70px 82px repeat(5, 70px);
+	grid-template-areas:
+		"dashboard"
+		"order-management"
+		"reporting"
+		"marketing"
+		"promotions"
+		"store"
+		"help";
+}
+
+.nav-wrapper div {
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: center 10px;
+	text-transform: capitalize;
+	display:flex;
+	justify-content:center;
+	align-items:stretch;
+	transition: 100ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+.nav-wrapper div:hover {
+	background-color: #666;
+}
+
+.nav-wrapper div.active {
+	background-color: #fff;
+}
+
+.nav-wrapper .active a {
+	color: #27292B;
+}
+
+.nav-wrapper div a {
+	padding-top:38px;
+	width: 102px;
+	color: #fff;
+	font-size:13px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.nav-item-00 {
+	background-image: url("../img/left-nav/dashboard_FFFFFF.svg");
+	grid-area: dashboard;
+}
+
+.nav-item-01 {
+	background-image: url("../img/left-nav/order-management_FFFFFF.svg");
+	grid-area: order-management;
+}
+
+.nav-item-02 {
+	background-image: url("../img/left-nav/reporting_FFFFFF.svg");
+	grid-area: reporting;
+}
+
+.nav-item-03 {
+	background-image: url("../img/left-nav/marketing_FFFFFF.svg");
+	grid-area: marketing;
+}
+
+.nav-item-04 {
+	background-image: url("../img/left-nav/promotions_FFFFFF.svg");
+	background-position: center 8px !important;
+	background-size: 33px 33px !important;
+	grid-area: promotions;
+}
+
+.nav-item-04.active {
+	background-image: url("../img/left-nav/promotions_27292B.svg");
+}
+
+.nav-item-05 {
+	background-image: url("../img/left-nav/store_FFFFFF.svg");
+	grid-area: store;
+}
+
+.nav-item-06 {
+	background-image: url("../img/left-nav/help_FFFFFF.svg");
+	grid-area: help;
+}
+
+main {
+	grid-area: main;
+	overflow-y: scroll;
+}
+
+.content-wrapper {
+	padding-left:24px;
+	width:902px;
+	animation: FadeIn .3s ease-in-out;
+}
+
+.content-wrapper h2 {
+	margin: 0;
+	padding: 20px 0;
+	font-size: 32px;
+}
+
+.content-bg {
+	background-color: #fff;
+  margin-bottom: 12px;
+  padding: 13px 12px;
+  border-right: 1px solid #d7d8d8;
+  border-bottom: 1px solid #d7d8d8;
+}
+
+.content-heading {
+	display: flex;
+	align-items: center;
+}
+
+.content-heading h2 {
+	margin-left: 12px;
+	flex: 1 0 auto;
+}
+
+.content-heading .add-new {
+	margin-right: 12px;
+	flex: 0 0 auto;
+}
+
+.status-warning {
+	padding: 0 12px 12px;
+}
+
+#view-wrapper .data-cell{
+	font-size: 1.3rem;
+	text-transform: capitalize;
+}
+
+#view-wrapper .data-cell span{
+	font-size: 1rem;
+}
+
+.index-grid-header {
+	border-bottom: 1px solid #EEF0F1;
+  color: #9EA2A3;
+  font-size: 0.9333rem;
+  display: grid;
+  grid-template: [row1-start]"name code discount period minimum status" 30px[row1-end]/250px 100px 100px 175px 100px 140px;
+}
+
+.index-grid-data {
+		border-bottom: 1px dashed #EEF0F1;
+		font-size: 1rem;
+	  display: grid;
+	  grid-template:
+	  	[row1-start]"name code discount period minimum status" 60px[row1-end]
+			[row2-start]". message message message message ." auto[row2-end]
+	  /250px 100px 100px 175px 100px 140px;
+}
+
+.index-grid-data:nth-last-child(1) {
+	border: 0;
+}
+
+.index-grid-data .data-cell {
+	align-self: center;
+}
+
+.index-grid-data .name a{
+	font-size: 1.33rem;
+	text-decoration: none;
+}
+
+.index-grid-header .period,  .index-grid-data .period  {
+	text-align: center;
+}
+
+.index-grid-data .status,  .index-grid-header .status{
+	text-align: right;
+}
+
+.index-grid-data .prStatus-switch {
+	color: #37BAE6;
+	cursor: pointer;
+}
+
+.index-grid-data .data-cell.messageCell {
+	width: 100%;
+	grid-area: message;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.index-grid-data .prMessage {
+	padding: 18px 0;
+	font-style: italic;
+}
+
+.form-grid {
+	display: grid;
+	grid-template:
+		[row1-start]"name code . delete" 50px [row1-end]
+		[row2-start]"status sale . ." 50px [row2-end]
+		[row3-start]"stores stores . ." 50px[row3-end]
+		[row4-start]"storeblock storeblock storeblock storeblock" [row4-end]
+		[row5-start]"dtype damount dmin pcount" 50px [row5-end]
+		[row6-start]"pstart pstop min max" 50px [row6-end]
+		[row7-start]"filter filter filter filter" auto [row7-end]
+		[row8-start]"ptype pstyle pregion pprice" auto [row8-end]
+		[row9-start]"message message message message" auto [row9-end]
+		/ 200px auto auto auto;
+	justify-items: start;
+	grid-gap: 18px 12px;
+}
+
+.form-grid .data-cell {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.form-grid .data-title, .data-cell label {
+	margin-bottom: 3px;
+	color: #9EA2A3;
+	font-size: 0.9333rem;
+}
+
+.form-grid .data-cell select {
+	width: 95%;
+	font-size: 16px;
+}
+
+.form-grid .data-cell select option {
+	text-transform: capitalize;
+}
+
+.form-grid .data-cell input[type="text"] {
+	padding: 0 3px;
+	height: 30px;
+	font-size: 16px;
+}
+
+.data-cell .store-link {
+	margin-left: 9px;
+	color: #37BAE6;
+	cursor: pointer;
+}
+
+.data-content label {
+	margin-left: 6px;
+	color: #222;
+	font-size: 1.2rem;
+}
+
+#filTypeCell, #filStyleCell, #filRegionCell, #filPriceCell {
+	justify-self: stretch;
+}
+
+#filTypeCell {
+	grid-area: ptype;
+}
+
+#prNameCell {
+	grid-area: name;
+}
+
+#prCodeCell {
+	grid-area: code;
+}
+
+#prDeleteCell, #prEditCell {
+	grid-area: delete;
+	text-align: right;
+}
+
+#prEditCell a {
+	font-size: 1rem;
+}
+
+#prDeleteCell  button {
+	color: #fff;
+	width: 200px;
+}
+
+#prStatusCell {
+	grid-area: status;
+}
+
+#prSaleItemsCell {
+	grid-area: sale;
+}
+
+#prStoresCell {
+	grid-area: stores;
+}
+
+#prDiscTypeCell {
+	grid-area: dtype;
+	justify-self: stretch;
+	justify-content: flex-start;
+}
+
+#prDiscAmountCell {
+	grid-area: damount;
+}
+
+#prDiscMinCell {
+	grid-area: dmin;
+}
+
+#prDiscCountCell {
+	grid-area: pcount;
+}	
+
+#prStartCell {
+	grid-area: pstart;
+}
+
+#prStopCell {
+	grid-area: pstop;
+}
+
+#prMinPurchCell {
+	grid-area: min;
+}
+
+#prMaxPurchCell {
+	grid-area: max;
+}
+
+#prFilterCell {
+	grid-area: filter;
+}
+
+#filStyleCell {
+	grid-area: pstyle;
+}
+
+#filRegionCell {
+	grid-area: pregion;
+}
+
+#filPriceCell {
+	grid-area: pprice;
+}
+
+#prMessageCell {
+	width: 100%;
+	grid-area: message;
+	display: flex;
+	flex-direction: column;
+}
+
+textarea#prMessage {
+	height: 70px;
+	border: 1px solid #C8C9CA;
+	resize: none;
+}
+
+div#prMessage {
+	margin-bottom: 18px;
+	font-size: 1.33rem;
+}
+
+div#prMessage:before, .prMessage:before {
+    content: open-quote;
+}
+div#prMessage:after, .prMessage:after {
+    content: close-quote;
+}
+
+#prSaveCell {
+	padding-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+#prSaveCell button {
+	padding: 6px 40px;
+	color: #fff;
+	background-color: #7BC219;
+}
+
+#allStoresWrapper {
+	background-color: #fafafa;
+	width: 100%;
+	display: none;
+	grid-area: storeblock;
+	grid-column: 1/5;
+}
+
+#allStores {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto;
+	grid-column-gap: 6px;
+	grid-row-gap: 9px;
+}
+
+.all-stores-data {
+	background-color: #fafafa;
+	padding: 3px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.all-stores-data input {
+	margin-top: 3px;
+}
+
+.all-stores-data label {
+	margin-left: 4px;
+	color: #222;
+	font-size: 1rem;
+	text-transform: capitalize;
+}
+
+#message {
+	font-size: 24px;
+}

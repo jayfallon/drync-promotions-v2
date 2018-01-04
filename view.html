@@ -1,0 +1,154 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- <link rel="manifest" href="site.webmanifest"> -->
+        <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- datepicker -->
+        <link rel="stylesheet" href="css/datepicker.min.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    </head>
+    <body role="document">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="wrapper">
+            <div class="drync-grid">
+                <header role="header">
+                    <div class="header-bg">
+                        <h1>
+                            <a href="index.html">
+                                <span>Portal Powered by Drync</span>
+                            </a>
+                        </h1>
+                        <div class="store-selection">
+                            <select name="store-select" id="store-select">
+                                <option value="joes">Joe's</option>
+                            </select>
+                        </div>
+                        <div class="user-avatar">
+                            <a href=""></a>
+                        </div>
+                    </div>
+                </header>
+                <nav role="nav" id="nav"></nav>
+                <main role="main">
+                    <div class="content-wrapper">
+                        <div class="content-heading">
+                            <h2>Promotions</h2>
+                            <div class="add-new">
+                                <a href="form.html">Add New Promotion</a>
+                            </div>
+                        </div>
+                        <div class="content-bg">
+                            <div id="view-wrapper">
+                                <div class="form-grid">
+                                    <div class="data-cell" id="prNameCell">
+                                        <label for="prName">Name</label>
+                                        <div id="prName"></div>
+                                    </div>
+                                    <div class="data-cell" id="prCodeCell">
+                                        <label for="prCode">Code</label>
+                                        <div id="prCode"></div>
+                                    </div>
+                                    <div class="data-cell" id="prEditCell">
+                                        
+                                    </div>
+                                    <div class="data-cell" id="prStatusCell">
+                                        <div class="data-title">Status</div>
+                                        <div class="data-content"><input type="checkbox" id="prStatus" checked><label for="">Active</label></div>
+                                    </div>
+                                    <div class="data-cell" id="prSaleItemsCell">
+                                        <div class="data-title">Sale Items</div>
+                                        <div class="data-content"><input type="checkbox" id="prSaleItems" checked><label for="">Included</label></div>
+                                    </div>
+                                    <div class="data-cell" id="prStoresCell">
+                                        <div class="data-title">Applicable Stores</div>
+                                        <div class="data-content"><input type="checkbox" id="prStores" checked><label for="">All Stores</label><span class="store-link">See All</span></div>
+                                    </div>
+                                    <div class="data-cell" id="allStoresWrapper">
+                                        <div id="allStores" class="data-cell"></div>
+                                    </div>
+                                    <div class="data-cell" id="prDiscTypeCell">
+                                        <label for="prDiscType">Discount Type</label>
+                                        <div id="prDiscType"></div>
+                                    </div>
+                                    <div class="data-cell" id="prDiscAmountCell">
+                                        <label for="prDiscAmount">Discount Amount</label>
+                                        <div id="prDiscAmount"></div>
+                                    </div>
+                                    <div class="data-cell" id="prDiscMinCell">
+                                        <label for="prDiscMin">Minimum Purchase</label>
+                                        <div id="prDiscMin"></div>
+                                    </div>
+                                    <div class="data-cell" id="prDiscCountCell">
+                                        <label for="prDiscCount">Product Count</label>
+                                        <div id="prDiscCount"></div>
+                                    </div>
+                                    <div class="data-cell" id="prStartCell">
+                                        <label for="prStart">Start Date</label>
+                                        <div id="prStart"></div>
+                                    </div>
+                                    <div class="data-cell" id="prStopCell">
+                                        <label for="prStop">Stop Date</label>
+                                        <div id="prStop"></div>
+                                    </div>
+                                    <div class="data-cell" id="prMinPurchCell">
+                                        <label for="prMinPurch">Min. Amount</label>
+                                        <div id="prMinPurch"></div>
+                                    </div>
+                                    <div class="data-cell" id="prMaxPurchCell">
+                                        <label for="prMaxPurch">Max. Amount</label>
+                                        <div id="prMaxPurch"></div>
+                                    </div>
+                                    <div class="data-cell" id="prFilterCell">
+                                        <div class="data-title">Filter product by:</div>
+                                    </div>
+                                    <div class="data-cell" id="filTypeCell">
+                                        <label for="filType">Type</label>
+                                        <div id="filType"></div>
+                                    </div>
+                                    <div class="data-cell" id="filStyleCell">
+                                        <label for="filStyle">Style</label>
+                                        <div id="filStyle"></div>
+                                    </div>
+                                    <div class="data-cell" id="filRegionCell">
+                                        <label for="filRegion">Region</label>
+                                        <div id="filRegion"></div>
+                                    </div>
+                                    <div class="data-cell" id="filPriceCell">
+                                        <label for="">Price</label>
+                                        <div id="filPrice"></div>
+                                    </div>
+                                    <div class="data-cell" id="prMessageCell">
+                                        <label for="prMessage">Promotional Message</label>
+                                        <div id="prMessage"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/datepicker.min.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/stores.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/view.js"></script>
+    </body>
+</html>

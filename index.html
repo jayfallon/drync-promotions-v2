@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- <link rel="manifest" href="site.webmanifest"> -->
+        <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- datepicker -->
+        <link rel="stylesheet" href="css/datepicker.min.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    </head>
+    <body role="document">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="wrapper">
+        	<div class="drync-grid">
+        		<header role="header">
+        			<div class="header-bg">
+        				<h1>
+        					<a href="index.html">
+        						<span>Portal Powered by Drync</span>
+        					</a>
+        				</h1>
+        				<div class="store-selection">
+        					<select name="store-select" id="store-select">
+        						<option value="joes">Joe's</option>
+        					</select>
+        				</div>
+        				<div class="user-avatar">
+                            <a href=""></a>
+                        </div>
+        			</div>
+        		</header>
+        		<nav role="nav" id="nav"></nav>
+        		<main role="main">
+                    <div class="content-wrapper">
+                        <div class="content-heading">
+                            <h2>Promotions</h2>
+                            <div class="add-new">
+                                <a href="form.html">Add New Promotion</a>
+                            </div>
+                        </div>
+                        <div class="content-bg">
+                            <div class="index-grid" id="index-grid">
+                                <div class="index-grid-header">
+                                    <div class="data-title name" id="prNameH">Name</div>
+                                    <div class="data-title code" id="prCodeH">Code</div>
+                                    <div class="data-title discount" id="prDiscAmountH">Discount</div>
+                                    <div class="data-title period" id="prPeriodH">Period</div>
+                                    <div class="data-title minimum" id="prDiscMinH">Minimum</div>
+                                    <div class="data-title status" id="prStatusH">Status</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        		</main>
+        	</div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/datepicker.min.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

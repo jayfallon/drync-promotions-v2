@@ -1,0 +1,176 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- <link rel="manifest" href="site.webmanifest"> -->
+        <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- datepicker -->
+        <link rel="stylesheet" href="css/datepicker.min.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    </head>
+    <body role="document">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="wrapper">
+        	<div class="drync-grid">
+        		<header role="header">
+        			<div class="header-bg">
+        				<h1>
+        					<a href="index.html">
+        						<span>Portal Powered by Drync</span>
+        					</a>
+        				</h1>
+        				<div class="store-selection">
+        					<select name="store-select" id="store-select">
+        						<option value="joes">Joe's</option>
+        					</select>
+        				</div>
+        				<div class="user-avatar">
+                            <a href=""></a>
+                        </div>
+        			</div>
+        		</header>
+        		<nav role="nav" id="nav"></nav>
+        		<main role="main">
+                    <div class="content-wrapper">
+                        <div class="content-heading">
+                            <h2>Promotions</h2>
+                        </div>
+                        <div class="content-bg">
+                            <form id="promo-form">
+                                <div class="form-grid">
+                                    <div class="data-cell" id="prNameCell">
+                                        <label for="prName">Name</label>
+                                        <input type="text" name="prName" id="prName">
+                                    </div>
+                                    <div class="data-cell" id="prCodeCell">
+                                        <label for="prCode">Code</label>
+                                        <input type="text" id="prCode">
+                                    </div>
+                                    <div class="data-cell" id="prDeleteCell">
+                                        <button type="button" id="prDelete">Delete This Promotion</button>
+                                    </div>
+                                    <div class="data-cell" id="prStatusCell">
+                                        <div class="data-title">Status</div>
+                                        <div class="data-content"><input type="checkbox" id="prStatus" checked><label for="">Active</label></div>
+                                    </div>
+                                    <div class="data-cell" id="prSaleItemsCell">
+                                        <div class="data-title">Sale Items</div>
+                                        <div class="data-content"><input type="checkbox" id="prSaleItems" checked><label for="">Included</label></div>
+                                    </div>
+                                    <div class="data-cell" id="prStoresCell">
+                                        <div class="data-title">Applicable Stores</div>
+                                        <div class="data-content"><input type="checkbox" id="prStores" checked><label for="">All Stores</label><span class="store-link">See All</span></div>
+                                    </div>
+                                    <div class="data-cell" id="allStoresWrapper">
+                                        <div id="allStores" class="data-cell"></div>
+                                    </div>
+                                    <div class="data-cell" id="prDiscTypeCell">
+                                        <label for="prDiscType">Discount Type</label>
+                                        <select name="prDiscType" id="prDiscType">
+                                            <option value="">Choose Type</option>
+                                            <option data-locos="dollars" value="amount">Amount</option>
+                                            <option data-locos="percent" value="percentage">Percentage</option>
+                                            <option data-locos="free shipping" value="frees">Free Shipping</option>
+                                            <option data-locos="free delivery" value="freed">Free Delivery</option>
+                                        </select>
+                                    </div>
+                                    <div class="data-cell" id="prDiscAmountCell">
+                                        <label for="prDiscAmount">Discount Amount</label>
+                                        <input type="text" id="prDiscAmount">
+                                    </div>
+                                    <div class="data-cell" id="prDiscMinCell">
+                                        <label for="prDiscMin">Minimum Purchase</label>
+                                        <input type="text" id="prDiscMin">
+                                    </div>
+                                    <div class="data-cell" id="prDiscCountCell">
+                                        <label for="prDiscCount">Product Count</label>
+                                        <input type="text" id="prDiscCount">
+                                    </div>
+                                    <div class="data-cell" id="prStartCell">
+                                        <label for="prStart">Start Date</label>
+                                        <input data-toggle="datepicker" type="text" id="prStart">
+                                    </div>
+                                    <div class="data-cell" id="prStopCell">
+                                        <label for="prStop">Stop Date</label>
+                                        <input data-toggle="datepicker" type="text" id="prStop">
+                                    </div>
+                                    <div class="data-cell" id="prMinPurchCell">
+                                        <label for="prMinPurch">Min. Amount</label>
+                                        <input type="text" id="prMinPurch">
+                                    </div>
+                                    <div class="data-cell" id="prMaxPurchCell">
+                                        <label for="prMaxPurch">Max. Amount</label>
+                                        <input type="text" id="prMaxPurch">
+                                    </div>
+                                    <div class="data-cell" id="prFilterCell">
+                                        <div class="data-title">Filter product by:</div>
+                                    </div>
+                                    <div class="data-cell" id="filTypeCell">
+                                        <label for="filType">Type</label>
+                                        <select name="filType" id="filType">
+                                            <option value="">Choose Type</option>
+                                            <option value="wine">Wine</option>
+                                            <option value="beer">Beer</option>
+                                            <option value="spirits">Spirits</option>
+                                            <option value="extras">Extras</option>
+                                        </select>
+                                    </div>
+                                    <div class="data-cell" id="filStyleCell">
+                                        <label for="filStyle">Style</label>
+                                        <select name="filStyle" id="filStyle" disabled>
+                                            <option value="">Choose Style</option>
+                                        </select>
+                                    </div>
+                                    <div class="data-cell" id="filRegionCell">
+                                        <label for="filRegion">Region</label>
+                                        <select name="filRegion" id="filRegion" disabled>
+                                            <option value="">Choose Region</option>
+                                        </select>
+                                    </div>
+                                    <div class="data-cell" id="filPriceCell">
+                                        <label for="">Price</label>
+                                        <select name="filPrice" id="filPrice">
+                                            <option value="">Choose Price</option>
+                                            <option value="low">$0 to $10</option>
+                                            <option value="mid">$10 - $50</option>
+                                            <option value="high">$50 and above</option>
+                                        </select>
+                                    </div>
+                                    <div class="data-cell" id="prMessageCell">
+                                        <label for="prMessage">Promotional Message</label>
+                                        <textarea name="prMessage" id="prMessage"></textarea>
+                                    </div>
+                                </div>
+                                <div class="data-save" id="prSaveCell">
+                                    <button type="button" id="prSave">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        		</main>
+        	</div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/datepicker.min.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/stores.js"></script>
+        <script src="js/selects.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/edit.js"></script>
+    </body>
+</html>
